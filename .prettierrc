@@ -8,5 +8,6 @@
     "prettier-plugin-merge"
   ],
   "importOrder": ["<THIRD_PARTY_MODULES>", "^[./]"],
-  "endingPosition": "absolute-with-indent"
+  "endingPosition": "absolute-with-indent",
+  "tailwindFunctions": ["clsx"]
 }
