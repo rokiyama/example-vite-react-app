@@ -16,7 +16,10 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className=" transform bg-red-500 text-center text-xl text-red-900 duration-500 ease-in hover:bg-blue-500 hover:text-blue-900">
+      <div
+        className=" transform bg-red-500 text-center text-xl text-red-900
+          duration-500 ease-in hover:bg-blue-500 hover:text-blue-900"
+      >
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
