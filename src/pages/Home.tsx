@@ -1,8 +1,8 @@
-import { Button } from './components/Button'
-import { useAppDispatch, useAppSelector } from './redux/hooks'
-import { increment, selectCount } from './redux/reducers/count'
+import { Button } from '../components/Button'
+import { useAppDispatch, useAppSelector } from '../redux/hooks'
+import { increment, selectCount } from '../redux/reducers/count'
 
-function App() {
+export const App = () => {
   const dispatch = useAppDispatch()
   const count = useAppSelector(selectCount)
 
@@ -16,5 +16,3 @@ function App() {
     </>
   )
 }
-
-export default App
