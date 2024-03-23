@@ -1,17 +1,15 @@
 import { Button } from '../components/Button'
-import { useAppDispatch, useAppSelector } from '../redux/hooks'
-import { increment, selectCount } from '../redux/reducers/count'
+import { User } from '../components/User'
+import { useGetUsersQuery } from '../redux/reducers/api'
 
 export const App = () => {
-  const dispatch = useAppDispatch()
-  const count = useAppSelector(selectCount)
+  const { data: users } = useGetUsersQuery({})
 
   return (
     <>
-      <h1 className="text-xl">Counter</h1>
-      <div className="flex items-center justify-center gap-5">
-        {count}
-        <Button onClick={() => dispatch(increment())}>Increment</Button>
+      <h1 className="text-xl">Users List</h1>
+      <div className="flex flex-col items-center justify-center gap-5">
+        {users?.map((user) => <User key={user.id} user={user} />)}
       </div>
     </>
   )
