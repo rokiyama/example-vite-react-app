@@ -1,4 +1,3 @@
-import { Button } from '../components/Button'
 import { User } from '../components/User'
 import { useGetUsersQuery } from '../redux/reducers/api'
 
