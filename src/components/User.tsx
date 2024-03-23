@@ -13,7 +13,12 @@ export const User = ({ user: { id, name, avatar } }: Props) => {
           pb-8 pt-6 shadow-md"
       >
         <div className="flex items-center space-x-4">
-          <img src={avatar} alt="アバター" className="h-10 w-10 rounded-full" />{' '}
+          <h2 className="text-md font-bold">{id}</h2>
+          <img
+            src={avatar}
+            alt="アバター"
+            className="h-10 w-10 rounded-full"
+          />{' '}
           <div>
             <h2 className="text-md font-bold">{name}</h2>
           </div>

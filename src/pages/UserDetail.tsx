@@ -9,6 +9,7 @@ export const UserDetail = () => {
       <h1 className="text-xl">User Detail</h1>
       {user ? (
         <div className="flex items-center space-x-4">
+          <h2 className="text-md font-bold">{user.id}</h2>
           <img
             src={user.avatar}
             alt="アバター"
