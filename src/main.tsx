@@ -17,6 +17,7 @@ const store = setupStore()
 
 const router = createBrowserRouter([
   {
+    path: '/',
     element: (
       <>
         <Outlet />
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/',
+        index: true,
         element: <App />,
         loader: async () => {
           const promise = store.dispatch(api.endpoints.getUsers.initiate({}))
